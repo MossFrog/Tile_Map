@@ -31,8 +31,8 @@ int main()
 
 
 
-
-
+	//-- Uncomment this section to remove the console pause after the render window closes --//
+	cout << "Thank You for Testing" << endl << endl;
 	system("PAUSE");
 	return 0;
 }
