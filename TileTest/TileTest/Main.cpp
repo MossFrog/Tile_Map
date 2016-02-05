@@ -6,6 +6,8 @@ int main()
 	window.setFramerateLimit(120);
 	window.setKeyRepeatEnabled(false);
 
+	MapLoader ml("/Maps");
+	
 
 	while (window.isOpen())
 	{

@@ -6,7 +6,10 @@
 #include <SFML/OpenGL.hpp>
 #include <iostream>
 #include <cstdlib>
+#include "tmx\MapLoader.h"
 
 using namespace std;
+using namespace tmx;
+
 
 #endif

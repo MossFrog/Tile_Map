@@ -13,15 +13,66 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="TMXLoader Files">
+      <UniqueIdentifier>{daeac439-ce1e-496e-bf96-a0a7ad3b0989}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\tmx\include\pugixml\pugiconfig.hpp">
+      <Filter>TMXLoader Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tmx\include\pugixml\pugixml.hpp">
+      <Filter>TMXLoader Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tmx\include\tmx\DebugShape.h">
+      <Filter>TMXLoader Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tmx\include\tmx\Helpers.h">
+      <Filter>TMXLoader Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tmx\include\tmx\Log.h">
+      <Filter>TMXLoader Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tmx\include\tmx\MapLayer.h">
+      <Filter>TMXLoader Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tmx\include\tmx\MapLoader.h">
+      <Filter>TMXLoader Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tmx\include\tmx\MapObject.h">
+      <Filter>TMXLoader Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tmx\include\tmx\QuadTreeNode.h">
+      <Filter>TMXLoader Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tmx\include\DebugShape.cpp">
+      <Filter>TMXLoader Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tmx\include\MapLayer.cpp">
+      <Filter>TMXLoader Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tmx\include\MapLoaderPrivate.cpp">
+      <Filter>TMXLoader Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tmx\include\MapLoaderPublic.cpp">
+      <Filter>TMXLoader Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tmx\include\MapObject.cpp">
+      <Filter>TMXLoader Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tmx\include\pugixml\pugixml.cpp">
+      <Filter>TMXLoader Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tmx\include\QuadTreeNode.cpp">
+      <Filter>TMXLoader Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
