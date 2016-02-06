@@ -1,4 +1,4 @@
-﻿Build started 6.2.2016 03:53:43.
+﻿Build started 6.2.2016 04:35:29.
      1>Project "C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\TileTest\TileTest.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\\tmx\include /IC:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\\ZlibCompiled /I"C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\\SFML-2.3.2\include" /IC:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\\Zlib /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
@@ -20,4 +20,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.13
+Time Elapsed 00:00:03.11

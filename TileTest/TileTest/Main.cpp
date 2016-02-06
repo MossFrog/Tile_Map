@@ -3,9 +3,16 @@
 int main()
 {
 	//-- Create a simple SFML render window with a limited refresh rate. --//
+	//-- The main window contains the whole map --//
+	//-- The Second render window represents the player's viewpoint --//
 	sf::RenderWindow window(sf::VideoMode(800, 600), "Tile Map Test", sf::Style::Close);
+	sf::RenderWindow playerView(sf::VideoMode(400, 300), "Player View", sf::Style::Titlebar);
+
 	window.setFramerateLimit(120);
 	window.setKeyRepeatEnabled(false);
+
+	playerView.setFramerateLimit(120);
+	playerView.setKeyRepeatEnabled(false);
 
 
 	//-- Give a simplified path to the Map folder. --//
@@ -15,17 +22,12 @@ int main()
 	//-- Load the map and update the user through the console window. --//
 	if (ml.Load("Testing.tmx"))
 	{
-		cout << "Loaded the map file Testing" << endl << endl;
+		cout << "Loaded the map file 'Testing.tmx'" << endl << endl;
 	}
 
 
 	//-- Create the view for the player --//
-
-	//-- Camera Position --//
-	float camX = 0;
-	float camY = 0;
-	
-	sf::View mainCamera(sf::FloatRect(camX, camY, 400, 300));
+	sf::View mainCamera(sf::FloatRect(0, 0, 400, 300));
 	
 	
 	//-- Main Game Loop --//
@@ -35,7 +37,11 @@ int main()
 		while (window.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
+			{ 
 				window.close();
+				playerView.close();
+			}
+				
 
 			//-- Check for Key Events --//
 			if (event.type == sf::Event::KeyPressed)
@@ -45,19 +51,47 @@ int main()
 		}
 
 
+		//-- Shift the camera depending on the input --//
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+		{
+			mainCamera.move(1, 0);
+		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+		{
+			mainCamera.move(-1, 0);
+		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+		{
+			mainCamera.move(0, -1);
+		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+		{
+			mainCamera.move(0, 1);
+		}
 		
 		
 
 		window.clear(sf::Color::Black);
-
-		//-- Set the view to the main Camera --//
-		window.setView(mainCamera);
 
 		//-- Draw the map object --//
 		window.draw(ml);
 
 		window.display();
 
+		playerView.clear(sf::Color::Black);
+
+		//-- Set the player view to the main Camera --//
+		playerView.setView(mainCamera);
+
+		playerView.draw(ml);
+
+		playerView.display();
+
+		//-- Note that the second render window 'playerView' has completely seperate draw methods --//
+		//-- This is solely for demonstration purposes --//
 
 	}
 
