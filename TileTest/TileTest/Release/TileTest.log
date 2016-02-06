@@ -1,7 +1,10 @@
-﻿Build started 6.2.2016 00:29:20.
+﻿Build started 6.2.2016 03:15:04.
      1>Project "C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\TileTest\TileTest.vcxproj" on node 2 (Build target(s)).
-     1>Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\Release\TileTest.exe" /NOLOGO /LIBPATH:C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\\ZlibCompiled\Tmp /LIBPATH:C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\\Zlib /LIBPATH:C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\\ZlibCompiled /LIBPATH:"C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\\SFML-2.3.2\lib" "sfml-graphics.lib" "sfml-window.lib" "sfml-system.lib" "sfml-audio.lib" zlibwapi.lib zlibstat.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\Release\TileTest.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\Release\TileTest.lib" /MACHINE:X86 /SAFESEH Release\DebugShape.obj
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\\tmx\include /IC:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\\ZlibCompiled /I"C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\\SFML-2.3.2\include" /IC:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\\Zlib /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
+         Main.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\Release\TileTest.exe" /NOLOGO /LIBPATH:C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\\Zlib /LIBPATH:C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\\ZlibCompiled /LIBPATH:"C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\\SFML-2.3.2\lib" "sfml-graphics.lib" "sfml-window.lib" "sfml-system.lib" "sfml-audio.lib" zlibstat.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\Release\TileTest.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\Release\TileTest.lib" /MACHINE:X86 /SAFESEH Release\DebugShape.obj
          Release\MapLayer.obj
          Release\MapLoaderPrivate.obj
          Release\MapLoaderPublic.obj
@@ -9,9 +12,12 @@
          Release\pugixml.obj
          Release\QuadTreeNode.obj
          Release\Main.obj
-     1>LINK : fatal error LNK1181: cannot open input file 'zlibstat.lib'
-     1>Done Building Project "C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\TileTest\TileTest.vcxproj" (Build target(s)) -- FAILED.
+     1>LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+         Generating code
+         Finished generating code
+         TileTest.vcxproj -> C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\Release\TileTest.exe
+     1>Done Building Project "C:\Users\Thinkpad\Desktop\GitReps\Tile_Map\TileTest\TileTest\TileTest.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.11
+Time Elapsed 00:00:03.39

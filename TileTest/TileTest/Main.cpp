@@ -6,7 +6,15 @@ int main()
 	window.setFramerateLimit(120);
 	window.setKeyRepeatEnabled(false);
 
-	MapLoader ml("/Maps");
+	MapLoader ml("../TileTest/Maps");
+	
+	if (ml.Load("Testing.tmx"))
+	{
+		cout << "Loaded the map file Testing" << endl << endl;
+	}
+	
+
+	
 	
 
 	while (window.isOpen())
@@ -24,6 +32,8 @@ int main()
 		}
 
 		window.clear(sf::Color::Black);
+
+		window.draw(ml);
 
 		window.display();
 
