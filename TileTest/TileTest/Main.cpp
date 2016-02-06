@@ -14,6 +14,22 @@ int main()
 	playerView.setFramerateLimit(120);
 	playerView.setKeyRepeatEnabled(false);
 
+	//-- Fonts and text used --//
+	sf::Font mainFont;
+
+	if (!mainFont.loadFromFile("BOOKOS.ttf"))
+	{}
+	else
+	{
+		cout << "Loaded the font 'Bookman Old Style.ttf'" << endl << endl;
+	}
+
+	sf::Text displayText;
+	displayText.setFont(mainFont);
+	displayText.setColor(sf::Color::Black);
+	displayText.setString("- Use Arrow Keys For Movement -");
+	displayText.setPosition(50, 500);
+
 	//-- Below are the integers used to prevent the camera from leaving the boundaries of the map. --//
 	int xpos = 0;
 	int ypos = 0;
@@ -85,7 +101,7 @@ int main()
 
 		//-- Draw the map object --//
 		window.draw(ml);
-
+		window.draw(displayText);
 		window.display();
 
 		playerView.clear(sf::Color::Black);
