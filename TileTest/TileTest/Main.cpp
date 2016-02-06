@@ -2,12 +2,17 @@
 
 int main()
 {
+	//-- Create a simple SFML render window with a limited refresh rate. --//
 	sf::RenderWindow window(sf::VideoMode(800, 600), "Tile Map Test", sf::Style::Close);
 	window.setFramerateLimit(120);
 	window.setKeyRepeatEnabled(false);
 
+
+	//-- Give a simplified path to the Map folder. --//
 	MapLoader ml("../TileTest/Maps");
 	
+
+	//-- Load the map and update the user through the console window. --//
 	if (ml.Load("Testing.tmx"))
 	{
 		cout << "Loaded the map file Testing" << endl << endl;
@@ -16,7 +21,7 @@ int main()
 
 	
 	
-
+	//-- Main Game Loop --//
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -25,6 +30,7 @@ int main()
 			if (event.type == sf::Event::Closed)
 				window.close();
 
+			//-- Check for Key Events --//
 			if (event.type == sf::Event::KeyPressed)
 			{
 
@@ -33,6 +39,7 @@ int main()
 
 		window.clear(sf::Color::Black);
 
+		//-- Draw the map object --//
 		window.draw(ml);
 
 		window.display();
