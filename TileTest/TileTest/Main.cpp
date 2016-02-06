@@ -17,8 +17,15 @@ int main()
 	{
 		cout << "Loaded the map file Testing" << endl << endl;
 	}
-	
 
+
+	//-- Create the view for the player --//
+
+	//-- Camera Position --//
+	float camX = 0;
+	float camY = 0;
+	
+	sf::View mainCamera(sf::FloatRect(camX, camY, 400, 300));
 	
 	
 	//-- Main Game Loop --//
@@ -37,7 +44,14 @@ int main()
 			}
 		}
 
+
+		
+		
+
 		window.clear(sf::Color::Black);
+
+		//-- Set the view to the main Camera --//
+		window.setView(mainCamera);
 
 		//-- Draw the map object --//
 		window.draw(ml);
